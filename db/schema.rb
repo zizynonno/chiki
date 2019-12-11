@@ -10,7 +10,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_11_071708) do
+ActiveRecord::Schema.define(version: 2019_12_11_111422) do
+
+  create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id_id"], name: "index_friends_on_user_id_id"
+  end
+
+  create_table "item_basics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "friend_id_id"
+    t.string "name"
+    t.integer "sex"
+    t.date "birthday"
+    t.string "meet"
+    t.string "tel"
+    t.string "url"
+    t.string "company"
+    t.string "address"
+    t.string "birthplace"
+    t.string "twitter"
+    t.string "facebook"
+    t.string "instagram"
+    t.string "line"
+    t.string "linkedin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id_id"], name: "index_item_basics_on_friend_id_id"
+  end
+
+  create_table "item_keys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "item_values", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "friend_id_id"
+    t.bigint "item_key_id_id"
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id_id"], name: "index_item_values_on_friend_id_id"
+    t.index ["item_key_id_id"], name: "index_item_values_on_item_key_id_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
