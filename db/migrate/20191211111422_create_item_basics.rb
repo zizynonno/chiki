@@ -1,7 +1,7 @@
 class CreateItemBasics < ActiveRecord::Migration[5.2]
   def change
     create_table :item_basics do |t|
-      t.references :friend_id
+      t.references :friend
       t.string :name
       t.integer :sex
       t.date :birthday

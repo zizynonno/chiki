@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
     friends_path
   end
 
+  def friend
+    friends = Friend.where(user: current_user)
+    @friends = ItemBasic.where(friend: friends)
+  end
+
   private
     def sign_in_required
       redirect_to new_user_session_url unless user_signed_in?

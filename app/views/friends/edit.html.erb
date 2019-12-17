@@ -1,2 +1,20 @@
-<h1>Friends#edit</h1>
-<p>Find me in app/views/friends/edit.html.erb</p>
+<h1>編集</h1>
+<%# form_forを使う %>
+<p>名前： <%= @ItemBasics.name %></p>
+<% if @ItemBasics.sex == 1 %>
+  <p>性別： 男</p>
+<% elsif @ItemBasics.sex == 2 %>
+  <p>性別： 女</p>
+<% end %>
+<p>誕生日： <%= @ItemBasics.birthday %></p>
+<p>出会った場所： <%= @ItemBasics.meet %></p>
+<p>電話番号： <%= @ItemBasics.tel %></p>
+<p>URL： <%= @ItemBasics.url %></p>
+<p>会社： <%= @ItemBasics.company %></p>
+<p>現住所： <%= @ItemBasics.address %></p>
+<p>出身： <%= @ItemBasics.birthplace %></p>
+<p>Twitter： <%= @ItemBasics.twitter %></p>
+<p>Facebook： <%= @ItemBasics.facebook %></p>
+<p>Instagram： <%= @ItemBasics.instagram %></p>
+<p>LINE： <%= @ItemBasics.line %></p>
+<p>LinkedIn： <%= @ItemBasics.linkedin %></p>

@@ -1,8 +1,8 @@
 class CreateItemValues < ActiveRecord::Migration[5.2]
   def change
     create_table :item_values do |t|
-      t.references :friend_id
-      t.references :item_key_id
+      t.references :friend
+      t.references :item_key
       t.text :name
 
       t.timestamps

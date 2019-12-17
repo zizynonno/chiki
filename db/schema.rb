@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 2019_12_11_111422) do
 
   create_table "friends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_friends_on_user_id_id"
+    t.index ["user_id"], name: "index_friends_on_user_id"
   end
 
   create_table "item_basics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "friend_id_id"
+    t.bigint "friend_id"
     t.string "name"
     t.integer "sex"
     t.date "birthday"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_12_11_111422) do
     t.string "linkedin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["friend_id_id"], name: "index_item_basics_on_friend_id_id"
+    t.index ["friend_id"], name: "index_item_basics_on_friend_id"
   end
 
   create_table "item_keys", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -47,13 +47,13 @@ ActiveRecord::Schema.define(version: 2019_12_11_111422) do
   end
 
   create_table "item_values", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "friend_id_id"
-    t.bigint "item_key_id_id"
+    t.bigint "friend_id"
+    t.bigint "item_key_id"
     t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["friend_id_id"], name: "index_item_values_on_friend_id_id"
-    t.index ["item_key_id_id"], name: "index_item_values_on_item_key_id_id"
+    t.index ["friend_id"], name: "index_item_values_on_friend_id"
+    t.index ["item_key_id"], name: "index_item_values_on_item_key_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
