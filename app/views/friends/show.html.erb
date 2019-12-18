@@ -17,4 +17,5 @@
 <p>LINE： <%= @ItemBasics.line %></p>
 <p>LinkedIn： <%= @ItemBasics.linkedin %></p>
 
-<%= link_to "編集", edit_friend_path %>
+<%# link_to "編集", edit_friend_path %>
+<%= link_to "編集", edit_friend_path(@ItemBasics.friend_id) %>
