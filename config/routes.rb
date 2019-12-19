@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#index'
+  root 'friends#index'
   get 'pages/show'
   resources :friends
   devise_for :users, :controllers => {

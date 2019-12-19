@@ -1,6 +1,9 @@
 class FriendsController < ApplicationController
   before_action :sign_in_required, only: [:new,:edit,:index,:show]
   before_action :friend
+  def index
+  end
+
   def new
     @Friend = Friend.new
     @ItemBasics = ItemBasic.new
@@ -10,7 +13,7 @@ class FriendsController < ApplicationController
     @Friend = current_user.friends.build
     @ItemBasics = @Friend.item_basics.build(user_params)
     if @Friend.save && @ItemBasics.save
-      redirect_to pages_show_path
+      redirect_to friends_path
     else
       render 'new'
     end
@@ -18,9 +21,6 @@ class FriendsController < ApplicationController
 
   def edit
     @ItemBasics = ItemBasic.find(params[:id])
-  end
-
-  def index
   end
 
   def show

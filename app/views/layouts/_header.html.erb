@@ -20,14 +20,16 @@
             <label id="nav-open" for="nav-input"><span></span></label>
             <label class="nav-unshown" id="nav-close" for="nav-input"></label>
             <div id="nav-content">
-              <ul class="drawer-menu">
-                <%= link_to "新規作成", new_friend_path %>
+              <div class="drawer-menu">
+                <div class="drawer-name">
+                  <%= link_to "新規作成", new_friend_path %>
+                </div>
                 <% @friends.each do |friend| %>
-                  <li>
+                  <div class="drawer-name">
                     <%= link_to friend.name, friend_path(friend) %>
-                  </li>
+                  </div>
                 <% end %>
-              </ul>
+              </div>
             </div>
         </div>
       </ul>

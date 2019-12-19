@@ -38,11 +38,44 @@ textarea {
   position: absolute;
   top: 17%;
   left: 45%;
+  text-align: center;
 }
 
 #logo:hover {
   color: #8b8b0b;
   text-decoration: none;
+}
+
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 /* sidebar layout */
@@ -118,6 +151,21 @@ textarea {
   transition: 0.3s ease-in-out; /*滑らかに表示*/
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%); /*左に隠しておく*/
+}
+
+.ul {
+  list-style: none;
+}
+
+.drawer-name {
+  font-size: 150%;
+  background: #f1f1f1;
+  padding: 0.1em 0.5em;
+  border: solid 1px #b3b3b3;
+  border-top: solid 1px #e0e0e0;
+  border-bottom: solid 1px #717171;
+  box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+  list-style: none;
 }
 
 /*チェックが入ったらもろもろ表示*/

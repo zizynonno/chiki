@@ -1,74 +1,15 @@
-<h1>Friends#index</h1>
-<p>Find me in app/views/friends/index.html.erb</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
-<p>a</p>
+<% if user_signed_in? %>
+  <div class="center jumbotron">
+    <%= link_to "新規作成", new_friend_path , class: "btn btn-lg btn-primary"%>
+ </div>
+<% else %>
+<div class="center jumbotron">
+  <h1>Chiki!へようこそ！</h1>
+  <p>Chiki!は出会った友達・仲間を記録していくアプリケーションです</p>
+  <p><%= Settings.sample[:sample]%></p>
+
+  <%= link_to "アカウント作成", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "ログイン", new_user_session_path, class: "btn btn-lg btn-outline-primary" %>
+</div>
+
+<% end %>
