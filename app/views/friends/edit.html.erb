@@ -2,11 +2,11 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 form-horizontal">
-    <%= form_for(@ItemBasics,url: edit_friend_path) do |f| %>
+    <%= form_for(@ItemBasics,url: friend_path) do |f| %>
 
       <div class="form-group">
         <label class="col-sm-2 control-label">
-          <%= f.label :name %>
+          <%= f.label "名前" %>
         </label>
         <div class="col-sm-10">
           <%= f.text_field :name %>
@@ -15,7 +15,7 @@
 
       <div class="form-group">
         <label class="col-sm-2 control-label">
-          <%= f.label :sex %>
+          <%= f.label "性別" %>
         </label>
         <div class="col-sm-10">
           <%= f.radio_button :sex, 1 %>男 <%= f.radio_button :sex, 2 %>女
@@ -23,53 +23,112 @@
       </div>
 
       <div class="form-group">
-        <label class="col-sm-2 control-label"><%= f.label :name %></label>
+        <label class="col-sm-2 control-label">
+          <%= f.label "誕生日" %>
+        </label>
         <div class="col-sm-10">
-          <%= f.text_field :name %>
+          <%= f.date_field :birthday %>
         </div>
       </div>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "出会った場所" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :meet %>
+        </div>
+      </div>
 
-      <%= f.label :sex %>
-      <%= f.radio_button :sex, 1 %>男 <%= f.radio_button :sex, 2 %>女
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "電話番号" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.telephone_field :tel %>
+        </div>
+      </div>
 
-      <%= f.label :birthday %>
-      <%= f.date_field :birthday %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "URL" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.url_field :url %>
+        </div>
+      </div>
 
-      <%= f.label :meet %>
-      <%= f.text_field :meet %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "会社" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :company %>
+        </div>
+      </div>
 
-      <%= f.label :tel %>
-      <%= f.telephone_field :tel %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "住所" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :address %>
+        </div>
+      </div>
 
-      <%= f.label :url %>
-      <%= f.url_field :url %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "出身" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :birthplace %>
+        </div>
+      </div>
 
-      <%= f.label :company %>
-      <%= f.text_field :company %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "Twitter" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :twitter %>
+        </div>
+      </div>
 
-      <%= f.label :address %>
-      <%= f.text_field :address %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "Facebook" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :facebook %>
+        </div>
+      </div>
 
-      <%= f.label :birthplace %>
-      <%= f.text_field :birthplace %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "Instagram" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :instagram %>
+        </div>
+      </div>
 
-      <%= f.label :twitter %>
-      <%= f.text_field :twitter %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "LINE" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :line %>
+        </div>
+      </div>
 
-      <%= f.label :facebook %>
-      <%= f.text_field :facebook %>
-
-      <%= f.label :instagram %>
-      <%= f.text_field :instagram %>
-
-      <%= f.label :line %>
-      <%= f.text_field :line %>
-
-      <%= f.label :linkedin %>
-      <%= f.text_field :linkedin %>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">
+          <%= f.label "LinkedIn" %>
+        </label>
+        <div class="col-sm-10">
+          <%= f.text_field :linkedin %>
+        </div>
+      </div>
 
       <%= f.submit "Edit account", class: "btn btn-primary" %>
     <% end %>

@@ -21,11 +21,12 @@
             <label class="nav-unshown" id="nav-close" for="nav-input"></label>
             <div id="nav-content">
               <ul class="drawer-menu">
-                  <% @friends.each do |friend| %>
-                    <li>
-                      <%= link_to friend.name, friend_path(friend) %>
-                    </li>
-                  <% end %>
+                <%= link_to "新規作成", new_friend_path %>
+                <% @friends.each do |friend| %>
+                  <li>
+                    <%= link_to friend.name, friend_path(friend) %>
+                  </li>
+                <% end %>
               </ul>
             </div>
         </div>

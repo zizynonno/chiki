@@ -17,6 +17,8 @@ services:
     extends:
       file: ./docker/mysql/password.yml
       service: password
+    stdin_open: true
+    tty: true
 
   db:
     build:
