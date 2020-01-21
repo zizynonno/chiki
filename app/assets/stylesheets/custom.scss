@@ -5,6 +5,7 @@
 
 body {
   padding-top: 60px;
+  background-color: #eceae6;
 }
 
 section {
@@ -46,6 +47,11 @@ textarea {
   text-decoration: none;
 }
 
+.navbar-default {
+  background-color: #ffaf04;
+  border-color: #e4ae1a;
+}
+
 /* typography */
 
 h1,
@@ -55,23 +61,24 @@ h4,
 h5,
 h6 {
   line-height: 1;
+  text-align: center;
 }
 
 h1 {
-  font-size: 3em;
+  // font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
-}
+// h2 {
+//   font-size: 1.2em;
+//   letter-spacing: -1px;
+//   margin-bottom: 30px;
+//   text-align: center;
+//   font-weight: normal;
+//   color: #777;
+// }
 
 p {
   font-size: 1.1em;
@@ -215,3 +222,12 @@ p {
 // input {
 //   height: auto !important;
 // }
+
+/* button */
+.btn {
+  display: inline-block;
+}
+
+.row {
+  padding-bottom: 50px;
+}

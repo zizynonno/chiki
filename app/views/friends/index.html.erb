@@ -1,6 +1,8 @@
 <% if user_signed_in? %>
   <div class="center jumbotron">
-    <%= link_to "新規作成", new_friend_path , class: "btn btn-lg btn-primary"%>
+  <h2>こんにちは、<%= current_user.username %>さん</h2>
+  <p>Chiki!は知己になった友達・仲間を記録していくアプリケーションです</p>
+    <%= link_to "新規作成", new_friend_path , class: "btn btn-lg btn-warning"%>
  </div>
 <% else %>
 <div class="center jumbotron">
@@ -8,8 +10,8 @@
   <p>Chiki!は出会った友達・仲間を記録していくアプリケーションです</p>
   <p><%= Settings.sample[:sample]%></p>
 
-  <%= link_to "アカウント作成", new_user_registration_path, class: "btn btn-lg btn-primary" %>
-  <%= link_to "ログイン", new_user_session_path, class: "btn btn-lg btn-outline-primary" %>
+  <%= link_to "アカウント作成", new_user_registration_path, class: "btn btn-lg btn-warning" %>
+  <%= link_to "ログイン", new_user_session_path, class: "btn btn-lg btn-outline-warning" %>
 </div>
 
 <% end %>
